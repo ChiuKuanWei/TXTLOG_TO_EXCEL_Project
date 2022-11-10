@@ -41,7 +41,7 @@
             // 
             this.lbl_MDB.AutoSize = true;
             this.lbl_MDB.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_MDB.Location = new System.Drawing.Point(26, 26);
+            this.lbl_MDB.Location = new System.Drawing.Point(21, 26);
             this.lbl_MDB.Name = "lbl_MDB";
             this.lbl_MDB.Size = new System.Drawing.Size(89, 16);
             this.lbl_MDB.TabIndex = 0;
@@ -52,7 +52,7 @@
             // txt_MDBPATH
             // 
             this.txt_MDBPATH.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_MDBPATH.Location = new System.Drawing.Point(124, 23);
+            this.txt_MDBPATH.Location = new System.Drawing.Point(119, 23);
             this.txt_MDBPATH.Name = "txt_MDBPATH";
             this.txt_MDBPATH.ReadOnly = true;
             this.txt_MDBPATH.Size = new System.Drawing.Size(586, 27);
@@ -67,7 +67,7 @@
             // txt_TXTPATH
             // 
             this.txt_TXTPATH.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_TXTPATH.Location = new System.Drawing.Point(124, 54);
+            this.txt_TXTPATH.Location = new System.Drawing.Point(119, 54);
             this.txt_TXTPATH.Name = "txt_TXTPATH";
             this.txt_TXTPATH.ReadOnly = true;
             this.txt_TXTPATH.Size = new System.Drawing.Size(586, 27);
@@ -78,7 +78,7 @@
             // 
             this.lbl_TXT.AutoSize = true;
             this.lbl_TXT.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_TXT.Location = new System.Drawing.Point(26, 57);
+            this.lbl_TXT.Location = new System.Drawing.Point(21, 57);
             this.lbl_TXT.Name = "lbl_TXT";
             this.lbl_TXT.Size = new System.Drawing.Size(86, 16);
             this.lbl_TXT.TabIndex = 2;
@@ -92,7 +92,7 @@
             // btn_Report
             // 
             this.btn_Report.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_Report.Location = new System.Drawing.Point(716, 55);
+            this.btn_Report.Location = new System.Drawing.Point(711, 55);
             this.btn_Report.Name = "btn_Report";
             this.btn_Report.Size = new System.Drawing.Size(72, 26);
             this.btn_Report.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 97);
             this.Controls.Add(this.btn_Report);
             this.Controls.Add(this.txt_TXTPATH);
             this.Controls.Add(this.lbl_TXT);

@@ -17,13 +17,13 @@ using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.Util;
 using System.Threading;
-using HorizontalAlignment = NPOI.SS.UserModel.HorizontalAlignment;
+using System.Collections;
 
 namespace TXTLOG_TO_EXCEL_Project
 {
     public partial class Form1 : Form
     {
-        
+        ArrayList AL_CellIndex = new ArrayList();  //記憶Sheet(ALL)結果為FAIL的項目儲存格索引 
         public Form1()
         {
             InitializeComponent();
@@ -88,7 +88,7 @@ namespace TXTLOG_TO_EXCEL_Project
             if ((strReadline = reader.ReadToEnd()) != null)
             {
                 string[] ReadlineArray = Regex.Split(strReadline, "================================================================================");
-                if (TableToExcel(ReadlineArray, dlg_TXT.FileName.Replace("txt", "xlsx")))
+                if (DataToExcel(ReadlineArray, dlg_TXT.FileName.Replace("txt", "xlsx")))
                 {
                     MessageBox.Show("匯出成功!");
                 }
@@ -110,14 +110,18 @@ namespace TXTLOG_TO_EXCEL_Project
             }
         }
 
-        #region Datable匯出成Excel
+        #region 匯出成Excel_Sheet(Item ALL)
         /// <summary>
         /// Datable匯出成Excel
         /// </summary>
         /// <param name="dt">內容列</param>
         /// <param name="file">檔名</param>
-        private bool TableToExcel(string[] arraystr, string file)
+        private bool DataToExcel(string[] arraystr, string file)
         {
+            if(AL_CellIndex.Count > 0)
+            {
+                AL_CellIndex.Clear();
+            }            
             int iCurrentRow = 0;  //記憶已被使用的列
             IWorkbook workbook;
 
@@ -130,23 +134,30 @@ namespace TXTLOG_TO_EXCEL_Project
                 workbook = new HSSFWorkbook();
                 file = file.Replace("xlsx", "xls");
             }
+            ISheet sheet_Item = workbook.CreateSheet("Item");
+            ISheet sheet_ALL = workbook.CreateSheet("ALL");
 
-            ISheet sheet1 = workbook.CreateSheet("ALL");
-            
-            //編輯字體
-            XSSFFont font = (XSSFFont)workbook.CreateFont();
-            font.FontName = "Tahoma";    //字型
-            font.FontHeightInPoints = 10;  //字體大小
+            //超連結字體
+            XSSFFont hyperlink_font = (XSSFFont)workbook.CreateFont();
+            hyperlink_font.FontName = "Tahoma";    //字型
+            hyperlink_font.FontHeightInPoints = 10;  //字體大小
+            hyperlink_font.Color = NPOI.HSSF.Util.HSSFColor.Blue.Index;
+            hyperlink_font.Underline = NPOI.SS.UserModel.FontUnderlineType.Single;  //底線
 
-            //表頭
-            try 
-            {
+            //正常字體
+            XSSFFont normal_font = (XSSFFont)workbook.CreateFont();
+            normal_font.FontName = "Tahoma";    //字型
+            normal_font.FontHeightInPoints = 10;  //字體大小           
+
+            //Sheet(ALL)表頭
+            try
+            {                
                 string[] ReadlineCOL = Regex.Split(arraystr[0].ToString(), "\r\n");
                 for (int i = 0; i < ReadlineCOL.Length; i++)
                 {
                     XSSFCellStyle col_style = (XSSFCellStyle)workbook.CreateCellStyle();
                     //建立新的列與欄位
-                    IRow col_row = sheet1.CreateRow(i);
+                    IRow col_row = sheet_ALL.CreateRow(i);
                     ICell col_cell = col_row.CreateCell(0);
                     if (i == 8)
                     {
@@ -159,9 +170,9 @@ namespace TXTLOG_TO_EXCEL_Project
                             col_style.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Red.Index;                           
                         }
                         col_style.FillPattern = FillPattern.SolidForeground;  //FillPattern=填滿樣式，但填滿樣式只有前景，即SolidForeground，也就是說要將自己以為的”背景色”，改為指定前景色(ForegroundColor)
-                        sheet1.AddMergedRegion(new CellRangeAddress(8, 8, 0, 7)); //MergedRegion=合併區域                       
+                        sheet_ALL.AddMergedRegion(new CellRangeAddress(8, 8, 0, 7)); //MergedRegion=合併區域                       
                     }
-                    col_style.SetFont(font);  //設置字體樣式                   
+                    col_style.SetFont(normal_font);  //設置字體樣式
                     col_cell.SetCellValue(ReadlineCOL[i].ToString());
                     col_cell.CellStyle = col_style;
 
@@ -174,30 +185,30 @@ namespace TXTLOG_TO_EXCEL_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show("表頭寫入失敗:" + ex.Message);
+                MessageBox.Show("Sheet(ALL)表頭寫入失敗:" + ex.Message);
                 return false;
             }
 
-            //內容
+            //Sheet(ALL)內容
             try
             {
                 //PASS
                 XSSFCellStyle stylePASS = (XSSFCellStyle)workbook.CreateCellStyle();
                 stylePASS.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Lime.Index;
                 stylePASS.FillPattern = FillPattern.SolidForeground;  //FillPattern = 填滿樣式
-                stylePASS.SetFont(font);
+                stylePASS.SetFont(normal_font);
 
                 //FAIL
                 XSSFCellStyle styleFAIL = (XSSFCellStyle)workbook.CreateCellStyle();
                 styleFAIL.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.Red.Index;
                 styleFAIL.FillPattern = FillPattern.SolidForeground;  //FillPattern = 填滿樣式
-                styleFAIL.SetFont(font);
+                styleFAIL.SetFont(normal_font);
 
                 //Default
                 XSSFCellStyle styleDefault = (XSSFCellStyle)workbook.CreateCellStyle();
                 styleDefault.FillForegroundColor = NPOI.HSSF.Util.HSSFColor.White.Index;
                 styleDefault.FillPattern = FillPattern.SolidForeground;  //FillPattern = 填滿樣式
-                styleDefault.SetFont(font);
+                styleDefault.SetFont(normal_font);
 
                 for (int i = 1; i < arraystr.Length; i++)
                 {
@@ -207,18 +218,19 @@ namespace TXTLOG_TO_EXCEL_Project
                     for (int j = 0; j < arrayDetail.Length; j++)
                     {                       
                         iCurrentRow = iCurrentRow + 1;                       
-                        IRow row1 = sheet1.CreateRow(iCurrentRow); 
+                        IRow row1 = sheet_ALL.CreateRow(iCurrentRow); 
                         ICell cell = row1.CreateCell(0);
 
                         if (arrayDetail[j].ToString().Contains("PASS"))
                         {
                             cell.CellStyle = stylePASS;
-                            sheet1.AddMergedRegion(new CellRangeAddress(iCurrentRow, iCurrentRow, 0, 7)); //MergedRegion=合併區
+                            sheet_ALL.AddMergedRegion(new CellRangeAddress(iCurrentRow, iCurrentRow, 0, 7)); //MergedRegion=合併區
                         }
                         else if (arrayDetail[j].ToString().Contains("FAIL"))
                         {
+                            AL_CellIndex.Add(iCurrentRow + 1);
                             cell.CellStyle = styleFAIL;
-                            sheet1.AddMergedRegion(new CellRangeAddress(iCurrentRow, iCurrentRow, 0, 7)); //MergedRegion=合併區
+                            sheet_ALL.AddMergedRegion(new CellRangeAddress(iCurrentRow, iCurrentRow, 0, 7)); //MergedRegion=合併區
                         }
                         else
                         {
@@ -232,7 +244,7 @@ namespace TXTLOG_TO_EXCEL_Project
                     for(int h = 0; h < 2; h++)
                     {
                         iCurrentRow = iCurrentRow + 1;
-                        IRow space_row1 = sheet1.CreateRow(iCurrentRow);
+                        IRow space_row1 = sheet_ALL.CreateRow(iCurrentRow);
                         ICell space_cell = space_row1.CreateCell(0);
                         space_cell.SetCellValue("");
                     }                    
@@ -240,7 +252,56 @@ namespace TXTLOG_TO_EXCEL_Project
             }
             catch (Exception ex)
             {
-                MessageBox.Show("內容寫入失敗:" + ex.Message);
+                MessageBox.Show("Sheet(ALL)內容寫入失敗:" + ex.Message);
+                return false;
+            }
+
+            //Sheet(Item)內容
+            try
+            {
+                iCurrentRow = 0;
+                for (int i = 1; i < arraystr.Length; i++)
+                {
+                    XSSFCellStyle Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
+                    if (!arraystr[i].ToString().Contains("STEP"))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        string sItem = arraystr[i].ToString().Trim();
+                        sItem = sItem.Replace("\r\n", "  ");
+                        IRow Item_row1 = sheet_Item.CreateRow(iCurrentRow);
+                        ICell Item_cell = Item_row1.CreateCell(0);
+
+                        int iPASSIndex = sItem.LastIndexOf("PASS");
+                        int iFAILIndex = sItem.LastIndexOf("FAIL");
+                        if (iPASSIndex > 0)
+                        {
+                            sItem = sItem.Substring(0, iPASSIndex + 4);
+                            Item_style.SetFont(normal_font);
+                        }
+                        if (iFAILIndex > 0)
+                        {
+                            sItem = sItem.Substring(0, iFAILIndex + 4);
+                            Item_style.SetFont(hyperlink_font);
+                            
+                            XSSFHyperlink link = new XSSFHyperlink(HyperlinkType.Document);
+                            link.Address = "#ALL" + "!A" + AL_CellIndex[0].ToString();  //設置超連結跳轉的位址
+                            AL_CellIndex.RemoveAt(0);
+                            Item_cell.Hyperlink = link;
+
+                            sheet_Item.AddMergedRegion(new CellRangeAddress(iCurrentRow, iCurrentRow, 0, 7));  //MergedRegion=合併區
+                        }
+                        Item_cell.SetCellValue(sItem);
+                        Item_cell.CellStyle = Item_style;
+                        iCurrentRow += 1;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sheet(Item)內容寫入失敗:" + ex.Message);
                 return false;
             }
 

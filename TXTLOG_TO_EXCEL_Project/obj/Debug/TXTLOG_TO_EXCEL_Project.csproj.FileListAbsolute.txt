@@ -34,3 +34,8 @@ C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_T
 C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.csproj.CopyComplete
 C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.exe
 C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.pdb
+C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\bin\Debug\Aspose.Cells.dll
+C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\bin\Debug\Spire.Pdf.dll
+C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\bin\Debug\Microsoft.mshtml.dll
+C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\bin\Debug\Aspose.Cells.xml
+C:\C# Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\bin\Debug\Spire.Pdf.xml
