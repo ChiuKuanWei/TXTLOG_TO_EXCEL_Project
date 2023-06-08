@@ -1,0 +1,46 @@
+[0] STEP.19(UUT Test seq.19) : PS ON Delay time 80611(90V_47Hz_L) ---- (0'858)  PASS
+[1] Vin            (V)= Refer to the previous item         
+[2] Fin           (Hz)= Refer to the previous item          
+[3] On Phase Delay(ms)= Refer to the previous item          
+[4] UUT Off Time   (s)= Refer to the previous item         
+[5] Loading  (A/Ohm/V)= Refer to the previous item 
+[6] 
+[7]
+[8] Trigger: 1:Trig1R(AC), 2:Trig2R(PS on), 3:TTL3R, 4:TTL4R, 5:CMPAR, 6:CMPBR, 7:SWR,
+[9]         8:Trig1F(AC), 9:Trig2F(PS on),10:TTL3F,11:TTL4F,12:CMPAF,13:CMPBF,14:SWF
+[10]
+[11]  TTL     Trigger
+[12] Index     Level
+[13] -------  ---------
+[14]   1         1  
+[15]   2         1  
+[16]   3         1  
+[17]   4         1  
+[18] 
+[19] Load             Start     End     VcmpA    VcmpB
+[20] Name             Trigger  Trigger    (V)      (V)
+[21] -------------    -------  -------  -------  -------
+[22] 12V                9        5      11.590   12.810 
+[23] 12Vsb              5        6       1.220   11.590 
+[24] PWOK               9        5       2.600    2.600 
+[25] Vin_Good           9        9       2.600    2.600 
+[26] SMBAlert           9        9       2.600    2.600 
+[27]  
+[28] Load            Ton       Ton       Ton
+[29] Name            Max       Min       (ms)
+[30] -------------  --------  --------  ---------
+[31] 12V             400.00      5.00      61.46   
+[32] 12Vsb            70.00      5.00      51.38   
+[33] PWOK          ********  ********     263.87   
+[34] Vin_Good      ********  ********       0.03   
+[35] SMBAlert      ********  ********       0.03   
+[36]
+[37]
+[38] Load           Ref Load       Td        Td        Td
+[39] Name           No.            Max       Min       (ms)
+[40] -------------  ----------    --------  --------  ---------
+[41] 12V              3           -500.000  -100.000  -202.413 
+[42] 12Vsb            0          ********* *********    51.382 
+[43] PWOK             1            500.000   100.000   202.413 
+[44] Vin_Good         0          ********* *********     0.034 
+[45] SMBAlert         0          ********* *********     0.034 

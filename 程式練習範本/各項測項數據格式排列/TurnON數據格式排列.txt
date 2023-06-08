@@ -1,0 +1,44 @@
+[0]STEP.9(UUT Test seq.9) : Turn On Timing Test_Multi or Single(264V_63Hz_H) - PASS
+[1]ElaspedTime    (S)=  2'028                    
+[2] Vin            (V)=   264.00 
+[3] Fin           (Hz)=    63.00 
+[4] On Phase Delay(ms)=    90.00 
+[5] UUT Off Time   (s)=     0.50 
+[6]
+[7] Trigger: 1:TTL1R, 2:TTL2R, 3:TTL3R, 4:TTL4R, 5:CMPAR, 6:CMPBR, 7:SWR,
+[8]          8:TTL1F, 9:TTL2F,10:TTL3F,11:TTL4F,12:CMPAF,13:CMPBF,14:SWF
+[9]
+[10]  TTL     Trigger
+[11] Index     Level
+[12]-------  ---------
+[13]   1        1.00 
+[14]   2        1.00 
+[15]   3        1.00 
+[16]   4        1.00 
+[17]
+[18] Load            Loading    Start     End     VcmpA    VcmpB
+[19] Name           (A/Ohm/V)  Trigger  Trigger    (V)      (V)
+[20]-------------  ----------  -------  -------  -------  -------
+[21] 12V             106.600       8        5     11.590   12.810 
+[22] 12Vsb             0.000       5        6      1.220   11.590 
+[23] PWOK              0.000       8        5      2.600    3.460 
+[24] Vin_Good          0.000       8        1      2.600    3.460 
+[25] SMBAlert          0.000       8        1      2.600    3.460 
+[26]
+[27] Load            Ton       Ton       Ton
+[28] Name            Max       Min       (ms)
+[29]-------------  --------  --------  ---------
+[30] 12V            3000.00      1.00     639.36 
+[31] 12Vsb            70.00      5.00      51.08 
+[32] PWOK          ********  ********     840.94 
+[33] Vin_Good      ********  ********       0.06 
+[34] SMBAlert      ********  ********       0.06 
+[35]
+[36] Load            Ref Load        Td        Td         Td
+[37] Name             No.            Max       Min       (ms)
+[38]------------- -------------   --------  --------  ---------
+[39] 12V                3          -500.00   -100.00    -201.58 
+[40] 12Vsb              1         ********  ********    -588.28 
+[41] PWOK               1           500.00    100.00     201.58 
+[42] Vin_Good           0         ********  ********       0.06 
+[43] SMBAlert           0         ********  ********       0.06

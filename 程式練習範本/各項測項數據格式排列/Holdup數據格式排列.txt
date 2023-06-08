@@ -1,0 +1,47 @@
+[0] STEP.14(UUT Test seq.14) : Hold Up Timing Test_Multi or Single(264V_63Hz_10 PASS
+[1] ElapsedTime    (S)=   0'562         
+[2] Vin            (V)=   264.00 
+[3] Fin           (Hz)=    63.00 
+[4] Delay Time    (ms)=     0.00 
+[5] On Phase Delay(ms)=    90.00 
+[6] UUT Off Time   (s)=     0.00 
+[7]
+[8] Trigger: 1:Trig1R(AC), 2:Trig2R(PS on), 3:TTL3R, 4:TTL4R, 5:CMPAR, 6:CMPBR, 7:SWR,
+[9]          8:Trig1F(AC), 9:Trig2F(PS on),10:TTL3F,11:TTL4F,12:CMPAF,13:CMPBF,14:SWF
+[10]
+[11]  TTL     Trigger
+[12] Index     Level 
+[13]-------  ---------
+[14]   1         1  
+[15]   2         1  
+[16]   3         1  
+[17]   4         1  
+[18]
+[19] Load           Loading     Start     End     VcmpA    VcmpB
+[20] Name          (A/Ohm/V)   Trigger  Trigger    (V)      (V)
+[21]-------------  ----------  -------  -------  -------  -------
+[22] 12V             106.600       8       12     11.590   12.810 
+[23] 12Vsb             0.000       8       12     11.400   12.600 
+[24] PWOK              0.000       8       12      2.600    3.460 
+[25] Vin_Good          0.000       8       12      2.600    3.460 
+[26] SMBAlert          0.000       8        1      2.600    3.460 
+[27]
+[28] Load          Tholdup   Tholdup   Tholdup
+[29] Name            Max       Min       (ms)
+[30]-------------  --------  --------  ---------
+[31] 12V              1000.00     12.00      17.90 
+[32] 12Vsb           ********  ********      17.88 
+[33] PWOK              300.00     11.00      16.29 
+[34] Vin_Good            4.00      0.01       2.75 
+[35] SMBAlert        ********  ********       0.06 
+[36]
+[37]
+[38]
+[39] Load            Ref Load      Tholdup   Tholdup   Tholdup
+[40] Name             No.            Max       Min       (ms)
+[41]-------------   ----------     --------  --------  ---------
+[42] 12V                3            100.00      1.00       1.61                                     
+[43] 12Vsb              0          ********  ********      17.88                                     
+[44] PWOK               1           -100.00     -1.00      -1.61                                     
+[45] Vin_Good           0          ********  ********       2.75                                     
+[46] SMBAlert           0          ********  ********       0.06  
