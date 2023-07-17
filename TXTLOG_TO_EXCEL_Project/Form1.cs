@@ -104,16 +104,42 @@ namespace TXTLOG_TO_EXCEL_Project
             if (dlg_MDB.ShowDialog() == DialogResult.OK)
             {               
                 txt_MDBPATH.Text = dlg_MDB.FileName;
+
+                // 提取檔名
+                string fileName = Path.GetFileName(dlg_MDB.FileName);
+
+                // 提取日期部分
+                string dateString = ExtractDateFromFileName(fileName, '@', '.');
+
                 sNormalFile = txt_MDBPATH.Text.Substring(0, txt_MDBPATH.Text.LastIndexOf("\\") + 1) + "TESTINFO.MDB";  //取得正常檔案
                 Select_MDB_Data(sNormalFile);
             }
         }
 
         /// <summary>
-        /// 抓取MDB檔內容
+        /// 抓取檔名日期
         /// </summary>
-        /// <param name="sNormalFile">檔案路徑</param>
-        private void Select_MDB_Data(string sNormalFile)
+        /// <param name="fileName">檔名</param>
+        /// <param name="startChar">切割頭</param>
+        /// <param name="endChar">切割尾</param>
+        /// <returns></returns>
+        private string ExtractDateFromFileName(string fileName, char startChar, char endChar)
+        {
+            int startIndex = fileName.IndexOf(startChar) + 1;
+            int endIndex = fileName.LastIndexOf(endChar);
+
+            if (startIndex >= 0 && endIndex >= 0 && endIndex > startIndex)
+            {
+                return fileName.Substring(startIndex, endIndex - startIndex);
+            }
+
+            return null; // 如果无法提取日期字符串，返回null或空字符串
+        }
+            /// <summary>
+            /// 抓取MDB檔內容
+            /// </summary>
+            /// <param name="sNormalFile">檔案路徑</param>
+            private void Select_MDB_Data(string sNormalFile)
         {
             _dt = new DataTable();
             string sConnectionString = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=" + sNormalFile;

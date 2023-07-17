@@ -62,4 +62,3 @@ C:\Code Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG
 C:\Code Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.csproj.CopyComplete
 C:\Code Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.exe
 C:\Code Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.pdb
-C:\Code Project\TXTLOG_TO_EXCEL_Project\TXTLOG_TO_EXCEL_Project\obj\Debug\TXTLOG_TO_EXCEL_Project.csproj.AssemblyReference.cache
