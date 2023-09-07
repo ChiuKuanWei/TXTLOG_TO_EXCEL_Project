@@ -220,81 +220,27 @@ namespace TXTLOG_TO_EXCEL_Project
             if(arrayList_TurnON.Count > 0)
             {
                 arrayList_TurnON.Clear();               
-            }
-            arrayList_TurnON.Add
-                (
-                     "SEQ" + "|" + "Name" + "|" + "A(12V)" + "|" + "A(12Vsb)" + "|" + "A(PWOK)" + "|" + "A(Vin_Good)" + "|" + "A(SMBAlert)"
-                     + "|" + "B(12V)" + "|" + "B(12Vsb)" + "|" + "B(PWOK)" + "|" + "B(Vin_Good)" + "|" + "B(SMBAlert)" + "|"
-                     + "Trig_S(12V)" + "|" + "Trig_S(12Vsb)" + "|" + "Trig_S(PWOK)" + "|" + "Trig_S(Vin_Good)" + "|" + "Trig_S(SMBAlert)" + "|"
-                     + "Trig_E(12V)" + "|" + "Trig_E(12Vsb)" + "|" + "Trig_E(PWOK)" + "|" + "Trig_E(Vin_Good)" + "|" + "Trig_E(SMBAlert)" + "|"
-                     + "T_Max(12V)" + "|" + "T_Max(12Vsb)" + "|" + "T_Max(PWOK)" + "|" + "T_Max(Vin_Good)" + "|" + "T_Max(SMBAlert)" + "|"
-                     + "T_Min(12V)" + "|" + "T_Min(12Vsb)" + "|" + "T_Min(PWOK)" + "|" + "T_Min(Vin_Good)" + "|" + "T_Min(SMBAlert)" + "|"
-                     + "Td_Max(12V)" + "|" + "Td_Max(12Vsb)" + "|" + "Td_Max(PWOK)" + "|" + "Td_Max(Vin_Good)" + "|" + "Td_Max(SMBAlert)" + "|"
-                     + "Td_Min(12V)" + "|" + "Td_Min(12Vsb)" + "|" + "Td_Min(PWOK)" + "|" + "Td_Min(Vin_Good)" + "|" + "Td_Min(SMBAlert)" + "|"
-                     + "Line" + "|" + "Load(12V)" + "|" + "Load(12Vsb)" + "|" + "Load(PWOK)" + "|" + "Load(Vin_Good)" + "|" + "Load(SMBAlert)"
-                );
+            }           
 
             if (arrayList_HoldUp.Count > 0)
             {
                 arrayList_HoldUp.Clear();
-            }
-            arrayList_HoldUp.Add
-                (
-                     "SEQ" + "|" + "Name" + "|" + "A(12V)" + "|" + "A(12Vsb)" + "|" + "A(PWOK)" + "|" + "A(Vin_Good)" + "|" + "A(SMBAlert)"
-                     + "|" + "B(12V)" + "|" + "B(12Vsb)" + "|" + "B(PWOK)" + "|" + "B(Vin_Good)" + "|" + "B(SMBAlert)" + "|"
-                     + "Trig_S(12V)" + "|" + "Trig_S(12Vsb)" + "|" + "Trig_S(PWOK)" + "|" + "Trig_S(Vin_Good)" + "|" + "Trig_S(SMBAlert)" + "|"
-                     + "Trig_E(12V)" + "|" + "Trig_E(12Vsb)" + "|" + "Trig_E(PWOK)" + "|" + "Trig_E(Vin_Good)" + "|" + "Trig_E(SMBAlert)" + "|"
-                     + "T_Max(12V)" + "|" + "T_Max(12Vsb)" + "|" + "T_Max(PWOK)" + "|" + "T_Max(Vin_Good)" + "|" + "T_Max(SMBAlert)" + "|"
-                     + "T_Min(12V)" + "|" + "T_Min(12Vsb)" + "|" + "T_Min(PWOK)" + "|" + "T_Min(Vin_Good)" + "|" + "T_Min(SMBAlert)" + "|"
-                     + "Td_Max(12V)" + "|" + "Td_Max(12Vsb)" + "|" + "Td_Max(PWOK)" + "|" + "Td_Max(Vin_Good)" + "|" + "Td_Max(SMBAlert)" + "|"
-                     + "Td_Min(12V)" + "|" + "Td_Min(12Vsb)" + "|" + "Td_Min(PWOK)" + "|" + "Td_Min(Vin_Good)" + "|" + "Td_Min(SMBAlert)" + "|"
-                     + "Line" + "|" + "Load(12V)" + "|" + "Load(12Vsb)" + "|" + "Load(PWOK)" + "|" + "Load(Vin_Good)" + "|" + "Load(SMBAlert)"
-                );
+            }            
 
             if (arrayList_PSOFF.Count > 0)
             {
                 arrayList_PSOFF.Clear();
-            }
-            arrayList_PSOFF.Add
-                (
-                     "SEQ" + "|" + "Name" + "|" + "A(12V)" + "|" + "A(12Vsb)" + "|" + "A(PWOK)" + "|" + "A(Vin_Good)" + "|" + "A(SMBAlert)"
-                     + "|" + "B(12V)" + "|" + "B(12Vsb)" + "|" + "B(PWOK)" + "|" + "B(Vin_Good)" + "|" + "B(SMBAlert)" + "|"
-                     + "Trig_S(12V)" + "|" + "Trig_S(12Vsb)" + "|" + "Trig_S(PWOK)" + "|" + "Trig_S(Vin_Good)" + "|" + "Trig_S(SMBAlert)" + "|"
-                     + "Trig_E(12V)" + "|" + "Trig_E(12Vsb)" + "|" + "Trig_E(PWOK)" + "|" + "Trig_E(Vin_Good)" + "|" + "Trig_E(SMBAlert)" + "|"
-                     + "T_Max(12V)" + "|" + "T_Max(12Vsb)" + "|" + "T_Max(PWOK)" + "|" + "T_Max(Vin_Good)" + "|" + "T_Max(SMBAlert)" + "|"
-                     + "T_Min(12V)" + "|" + "T_Min(12Vsb)" + "|" + "T_Min(PWOK)" + "|" + "T_Min(Vin_Good)" + "|" + "T_Min(SMBAlert)" + "|"
-                     + "Td_Max(12V)" + "|" + "Td_Max(12Vsb)" + "|" + "Td_Max(PWOK)" + "|" + "Td_Max(Vin_Good)" + "|" + "Td_Max(SMBAlert)" + "|"
-                     + "Td_Min(12V)" + "|" + "Td_Min(12Vsb)" + "|" + "Td_Min(PWOK)" + "|" + "Td_Min(Vin_Good)" + "|" + "Td_Min(SMBAlert)"                     
-                );
+            }           
 
             if (arrayList_PSON.Count > 0)
             {
                 arrayList_PSON.Clear();
-            }
-            arrayList_PSON.Add
-                (
-                     "SEQ" + "|" + "Name" + "|" + "A(12V)" + "|" + "A(12Vsb)" + "|" + "A(PWOK)" + "|" + "A(Vin_Good)" + "|" + "A(SMBAlert)"
-                     + "|" + "B(12V)" + "|" + "B(12Vsb)" + "|" + "B(PWOK)" + "|" + "B(Vin_Good)" + "|" + "B(SMBAlert)" + "|"
-                     + "Trig_S(12V)" + "|" + "Trig_S(12Vsb)" + "|" + "Trig_S(PWOK)" + "|" + "Trig_S(Vin_Good)" + "|" + "Trig_S(SMBAlert)" + "|"
-                     + "Trig_E(12V)" + "|" + "Trig_E(12Vsb)" + "|" + "Trig_E(PWOK)" + "|" + "Trig_E(Vin_Good)" + "|" + "Trig_E(SMBAlert)" + "|"
-                     + "T_Max(12V)" + "|" + "T_Max(12Vsb)" + "|" + "T_Max(PWOK)" + "|" + "T_Max(Vin_Good)" + "|" + "T_Max(SMBAlert)" + "|"
-                     + "T_Min(12V)" + "|" + "T_Min(12Vsb)" + "|" + "T_Min(PWOK)" + "|" + "T_Min(Vin_Good)" + "|" + "T_Min(SMBAlert)" + "|"
-                     + "Td_Max(12V)" + "|" + "Td_Max(12Vsb)" + "|" + "Td_Max(PWOK)" + "|" + "Td_Max(Vin_Good)" + "|" + "Td_Max(SMBAlert)" + "|"
-                     + "Td_Min(12V)" + "|" + "Td_Min(12Vsb)" + "|" + "Td_Min(PWOK)" + "|" + "Td_Min(Vin_Good)" + "|" + "Td_Min(SMBAlert)"
-                );
+            }            
 
             if (arrayList_EffNoise.Count > 0)
             {
                 arrayList_EffNoise.Clear();
-            }
-            arrayList_EffNoise.Add
-                (
-                     "SEQ" + "|" + "Name" + "|" + "Ripple(12V)" + "|" + "Ripple(12Vsb)" + "|" + "Ripple(PWOK)" + "|" + "Ripple(Vin_Good)" + "|" + "Ripple(SMBAlert)"
-                     + "|" + "Vin" + "|" + "Frequ" + "|"
-                     + "Vout_Max(12V)" + "|" + "Vout_Max(12Vsb)" + "|" + "Vout_Max(PWOK)" + "|" + "Vout_Max(Vin_Good)" + "|" + "Vout_Max(SMBAlert)" + "|"
-                     + "Vout_Min(12V)" + "|" + "Vout_Min(12Vsb)" + "|" + "Vout_Min(PWOK)" + "|" + "Vout_Min(Vin_Good)" + "|" + "Vout_Min(SMBAlert)" + "|"                      
-                     + "Load(12V)" + "|" + "Load(12Vsb)" + "|" + "Load(PWOK)" + "|" + "Load(Vin_Good)" + "|" + "Load(SMBAlert)" 
-                );
+            }          
 
             #endregion
 
@@ -396,7 +342,9 @@ namespace TXTLOG_TO_EXCEL_Project
                 {
                     string sDetail = arraystr[i].Trim();
                     string[] arrayDetail = Regex.Split(sDetail, "\r\n|\n");
-
+                    //取得個欄位數據集和欄位名稱
+                    string sAll_Data = "";
+                    string sAll_Col = "";
 
                     #region 取得每項Turn ON測項數據區
                     if (arrayDetail[0].ToString().Contains("Turn On Timing Test_Multi or Single"))
@@ -586,20 +534,37 @@ namespace TXTLOG_TO_EXCEL_Project
                         result = Regex.Replace(input, pattern, replacement);
                         arrayresult = result.Split(' ');
                         TurnOn_Column.LoadSMBAlert = arrayresult[1].ToString();
-                        
-                        arrayList_TurnON.Add
-                        (
-                              TurnOn_Column.SEQ + "|" + TurnOn_Column.Name + "|" 
-                            + TurnOn_Column.A12V + "|" + TurnOn_Column.A12Vsb + "|" + TurnOn_Column.APWOK + "|" + TurnOn_Column.AVin_Good + "|" + TurnOn_Column.ASMBAlert + "|" 
-                            + TurnOn_Column.B12V + "|" + TurnOn_Column.B12Vsb + "|" + TurnOn_Column.BPWOK + "|" + TurnOn_Column.BVin_Good + "|" + TurnOn_Column.BSMBAlert + "|"
-                            + TurnOn_Column.Trig_S12V + "|" + TurnOn_Column.Trig_S12Vsb + "|" + TurnOn_Column.Trig_SPWOK + "|" + TurnOn_Column.Trig_SVin_Good + "|" + TurnOn_Column.Trig_SSMBAlert + "|" 
-                            + TurnOn_Column.Trig_E12V + "|" + TurnOn_Column.Trig_E12Vsb + "|" + TurnOn_Column.Trig_EPWOK + "|" + TurnOn_Column.Trig_EVin_Good + "|" + TurnOn_Column.Trig_ESMBAlert + "|" 
-                            + TurnOn_Column.T_Max12V + "|" + TurnOn_Column.T_Max12Vsb + "|" + TurnOn_Column.T_MaxPWOK + "|" + TurnOn_Column.T_MaxVin_Good + "|" + TurnOn_Column.T_MaxSMBAlert + "|"
-                            + TurnOn_Column.T_Min12V + "|" + TurnOn_Column.T_Min12Vsb + "|" + TurnOn_Column.T_MinPWOK + "|" + TurnOn_Column.T_MinVin_Good + "|" + TurnOn_Column.T_MinSMBAlert + "|" 
-                            + TurnOn_Column.Td_Max12V + "|" + TurnOn_Column.Td_Max12Vsb + "|" + TurnOn_Column.Td_MaxPWOK + "|" + TurnOn_Column.Td_MaxVin_Good + "|" + TurnOn_Column.Td_MaxSMBAlert + "|"
-                            + TurnOn_Column.Td_Min12V + "|" + TurnOn_Column.Td_Min12Vsb + "|" + TurnOn_Column.Td_MinPWOK + "|" + TurnOn_Column.Td_MinVin_Good + "|" + TurnOn_Column.Td_MinSMBAlert + "|"
-                            + TurnOn_Column.Line + "|" + TurnOn_Column.Load12V + "|" + TurnOn_Column.Load12Vsb + "|" + TurnOn_Column.LoadPWOK + "|" + TurnOn_Column.LoadVin_Good + "|" + TurnOn_Column.LoadSMBAlert
-                        );
+
+                        //取得模組裡各個變數與值
+                        Type TurnOnColumnType = typeof(TurnOn_Column);
+                        PropertyInfo[] properties = TurnOnColumnType.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                        foreach (PropertyInfo property in properties)
+                        {
+                            string propertyName = property.Name;
+                            sAll_Col += propertyName + "|";
+                            string propertyValue = (string)property.GetValue(null); // 使用null表示靜態屬性值
+                            sAll_Data += propertyValue + "|";
+                        }
+
+                        if (sAll_Col != "")
+                        {
+                            sAll_Col = sAll_Col.Trim('|');
+                        }
+
+                        if (sAll_Data != "")
+                        {
+                            sAll_Data = sAll_Data.Trim('|');
+                        }
+
+                        if (arrayList_TurnON.Count == 0)
+                        {
+                            arrayList_TurnON.Add(sAll_Col);
+                            arrayList_TurnON.Add(sAll_Data);
+                        }
+                        else
+                        {
+                            arrayList_TurnON.Add(sAll_Data);
+                        }
 
                     }
                     #endregion
@@ -793,19 +758,36 @@ namespace TXTLOG_TO_EXCEL_Project
                         arrayresult = result.Split(' ');
                         HoldUp_Column.LoadSMBAlert = arrayresult[1].ToString();
 
-                        arrayList_HoldUp.Add
-                        (
-                              HoldUp_Column.SEQ + "|" + HoldUp_Column.Name + "|"
-                            + HoldUp_Column.A12V + "|" + HoldUp_Column.A12Vsb + "|" + HoldUp_Column.APWOK + "|" + HoldUp_Column.AVin_Good + "|" + HoldUp_Column.ASMBAlert + "|"
-                            + HoldUp_Column.B12V + "|" + HoldUp_Column.B12Vsb + "|" + HoldUp_Column.BPWOK + "|" + HoldUp_Column.BVin_Good + "|" + HoldUp_Column.BSMBAlert + "|"
-                            + HoldUp_Column.Trig_S12V + "|" + HoldUp_Column.Trig_S12Vsb + "|" + HoldUp_Column.Trig_SPWOK + "|" + HoldUp_Column.Trig_SVin_Good + "|" + HoldUp_Column.Trig_SSMBAlert + "|"
-                            + HoldUp_Column.Trig_E12V + "|" + HoldUp_Column.Trig_E12Vsb + "|" + HoldUp_Column.Trig_EPWOK + "|" + HoldUp_Column.Trig_EVin_Good + "|" + HoldUp_Column.Trig_ESMBAlert + "|"
-                            + HoldUp_Column.T_Max12V + "|" + HoldUp_Column.T_Max12Vsb + "|" + HoldUp_Column.T_MaxPWOK + "|" + HoldUp_Column.T_MaxVin_Good + "|" + HoldUp_Column.T_MaxSMBAlert + "|"
-                            + HoldUp_Column.T_Min12V + "|" + HoldUp_Column.T_Min12Vsb + "|" + HoldUp_Column.T_MinPWOK + "|" + HoldUp_Column.T_MinVin_Good + "|" + HoldUp_Column.T_MinSMBAlert + "|"
-                            + HoldUp_Column.Td_Max12V + "|" + HoldUp_Column.Td_Max12Vsb + "|" + HoldUp_Column.Td_MaxPWOK + "|" + HoldUp_Column.Td_MaxVin_Good + "|" + HoldUp_Column.Td_MaxSMBAlert + "|"
-                            + HoldUp_Column.Td_Min12V + "|" + HoldUp_Column.Td_Min12Vsb + "|" + HoldUp_Column.Td_MinPWOK + "|" + HoldUp_Column.Td_MinVin_Good + "|" + HoldUp_Column.Td_MinSMBAlert + "|"
-                            + HoldUp_Column.Line + "|" + HoldUp_Column.Load12V + "|" + HoldUp_Column.Load12Vsb + "|" + HoldUp_Column.LoadPWOK + "|" + HoldUp_Column.LoadVin_Good + "|" + HoldUp_Column.LoadSMBAlert
-                        );
+                        //取得模組裡各個變數與值
+                        Type HoldUpColumnType = typeof(HoldUp_Column);
+                        PropertyInfo[] properties = HoldUpColumnType.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                        foreach (PropertyInfo property in properties)
+                        {
+                            string propertyName = property.Name;
+                            sAll_Col += propertyName + "|";
+                            string propertyValue = (string)property.GetValue(null); // 使用null表示靜態屬性值
+                            sAll_Data += propertyValue + "|";
+                        }
+
+                        if (sAll_Col != "")
+                        {
+                            sAll_Col = sAll_Col.Trim('|');
+                        }
+
+                        if (sAll_Data != "")
+                        {
+                            sAll_Data = sAll_Data.Trim('|');
+                        }
+
+                        if (arrayList_HoldUp.Count == 0)
+                        {
+                            arrayList_HoldUp.Add(sAll_Col);
+                            arrayList_HoldUp.Add(sAll_Data);
+                        }
+                        else
+                        {
+                            arrayList_HoldUp.Add(sAll_Data);
+                        }
 
                     }
                     #endregion
@@ -961,20 +943,38 @@ namespace TXTLOG_TO_EXCEL_Project
                         result = Regex.Replace(input, pattern, replacement);
                         arrayresult = result.Split(' ');
                         PSOFF_Column.Td_MaxSMBAlert = arrayresult[2].ToString();
-                        PSOFF_Column.Td_MinSMBAlert = arrayresult[3].ToString();                      
+                        PSOFF_Column.Td_MinSMBAlert = arrayresult[3].ToString();
 
-                        arrayList_PSOFF.Add
-                        (
-                              PSOFF_Column.SEQ + "|" + PSOFF_Column.Name + "|"
-                            + PSOFF_Column.A12V + "|" + PSOFF_Column.A12Vsb + "|" + PSOFF_Column.APWOK + "|" + PSOFF_Column.AVin_Good + "|" + PSOFF_Column.ASMBAlert + "|"
-                            + PSOFF_Column.B12V + "|" + PSOFF_Column.B12Vsb + "|" + PSOFF_Column.BPWOK + "|" + PSOFF_Column.BVin_Good + "|" + PSOFF_Column.BSMBAlert + "|"
-                            + PSOFF_Column.Trig_S12V + "|" + PSOFF_Column.Trig_S12Vsb + "|" + PSOFF_Column.Trig_SPWOK + "|" + PSOFF_Column.Trig_SVin_Good + "|" + PSOFF_Column.Trig_SSMBAlert + "|"
-                            + PSOFF_Column.Trig_E12V + "|" + PSOFF_Column.Trig_E12Vsb + "|" + PSOFF_Column.Trig_EPWOK + "|" + PSOFF_Column.Trig_EVin_Good + "|" + PSOFF_Column.Trig_ESMBAlert + "|"
-                            + PSOFF_Column.T_Max12V + "|" + PSOFF_Column.T_Max12Vsb + "|" + PSOFF_Column.T_MaxPWOK + "|" + PSOFF_Column.T_MaxVin_Good + "|" + PSOFF_Column.T_MaxSMBAlert + "|"
-                            + PSOFF_Column.T_Min12V + "|" + PSOFF_Column.T_Min12Vsb + "|" + PSOFF_Column.T_MinPWOK + "|" + PSOFF_Column.T_MinVin_Good + "|" + PSOFF_Column.T_MinSMBAlert + "|"
-                            + PSOFF_Column.Td_Max12V + "|" + PSOFF_Column.Td_Max12Vsb + "|" + PSOFF_Column.Td_MaxPWOK + "|" + PSOFF_Column.Td_MaxVin_Good + "|" + PSOFF_Column.Td_MaxSMBAlert + "|"
-                            + PSOFF_Column.Td_Min12V + "|" + PSOFF_Column.Td_Min12Vsb + "|" + PSOFF_Column.Td_MinPWOK + "|" + PSOFF_Column.Td_MinVin_Good + "|" + PSOFF_Column.Td_MinSMBAlert                           
-                        );
+                        //取得模組裡各個變數與值
+                        Type PSOFFColumnType = typeof(PSOFF_Column);
+                        PropertyInfo[] properties = PSOFFColumnType.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                        foreach (PropertyInfo property in properties)
+                        {
+                            string propertyName = property.Name;
+                            sAll_Col += propertyName + "|";
+                            string propertyValue = (string)property.GetValue(null); // 使用null表示靜態屬性值
+                            sAll_Data += propertyValue + "|";
+                        }
+
+                        if (sAll_Col != "")
+                        {
+                            sAll_Col = sAll_Col.Trim('|');
+                        }
+
+                        if (sAll_Data != "")
+                        {
+                            sAll_Data = sAll_Data.Trim('|');
+                        }
+
+                        if (arrayList_PSOFF.Count == 0)
+                        {
+                            arrayList_PSOFF.Add(sAll_Col);
+                            arrayList_PSOFF.Add(sAll_Data);
+                        }
+                        else
+                        {
+                            arrayList_PSOFF.Add(sAll_Data);
+                        }
 
                     }
                     #endregion
@@ -1132,18 +1132,36 @@ namespace TXTLOG_TO_EXCEL_Project
                         PSON_Column.Td_MaxSMBAlert = arrayresult[2].ToString();
                         PSON_Column.Td_MinSMBAlert = arrayresult[3].ToString();
 
-                        arrayList_PSON.Add
-                        (
-                              PSON_Column.SEQ + "|" + PSON_Column.Name + "|"
-                            + PSON_Column.A12V + "|" + PSON_Column.A12Vsb + "|" + PSON_Column.APWOK + "|" + PSON_Column.AVin_Good + "|" + PSON_Column.ASMBAlert + "|"
-                            + PSON_Column.B12V + "|" + PSON_Column.B12Vsb + "|" + PSON_Column.BPWOK + "|" + PSON_Column.BVin_Good + "|" + PSON_Column.BSMBAlert + "|"
-                            + PSON_Column.Trig_S12V + "|" + PSON_Column.Trig_S12Vsb + "|" + PSON_Column.Trig_SPWOK + "|" + PSON_Column.Trig_SVin_Good + "|" + PSON_Column.Trig_SSMBAlert + "|"
-                            + PSON_Column.Trig_E12V + "|" + PSON_Column.Trig_E12Vsb + "|" + PSON_Column.Trig_EPWOK + "|" + PSON_Column.Trig_EVin_Good + "|" + PSON_Column.Trig_ESMBAlert + "|"
-                            + PSON_Column.T_Max12V + "|" + PSON_Column.T_Max12Vsb + "|" + PSON_Column.T_MaxPWOK + "|" + PSON_Column.T_MaxVin_Good + "|" + PSON_Column.T_MaxSMBAlert + "|"
-                            + PSON_Column.T_Min12V + "|" + PSON_Column.T_Min12Vsb + "|" + PSON_Column.T_MinPWOK + "|" + PSON_Column.T_MinVin_Good + "|" + PSON_Column.T_MinSMBAlert + "|"
-                            + PSON_Column.Td_Max12V + "|" + PSON_Column.Td_Max12Vsb + "|" + PSON_Column.Td_MaxPWOK + "|" + PSON_Column.Td_MaxVin_Good + "|" + PSON_Column.Td_MaxSMBAlert + "|"
-                            + PSON_Column.Td_Min12V + "|" + PSON_Column.Td_Min12Vsb + "|" + PSON_Column.Td_MinPWOK + "|" + PSON_Column.Td_MinVin_Good + "|" + PSON_Column.Td_MinSMBAlert
-                        );
+                        //取得模組裡各個變數與值
+                        Type PSONColumnType = typeof(PSON_Column);
+                        PropertyInfo[] properties = PSONColumnType.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                        foreach (PropertyInfo property in properties)
+                        {
+                            string propertyName = property.Name;
+                            sAll_Col += propertyName + "|";
+                            string propertyValue = (string)property.GetValue(null); // 使用null表示靜態屬性值
+                            sAll_Data += propertyValue + "|";
+                        }
+
+                        if (sAll_Col != "")
+                        {
+                            sAll_Col = sAll_Col.Trim('|');
+                        }
+
+                        if (sAll_Data != "")
+                        {
+                            sAll_Data = sAll_Data.Trim('|');
+                        }
+
+                        if (arrayList_PSON.Count == 0)
+                        {
+                            arrayList_PSON.Add(sAll_Col);
+                            arrayList_PSON.Add(sAll_Data);
+                        }
+                        else
+                        {
+                            arrayList_PSON.Add(sAll_Data);
+                        }
 
                     }
                     #endregion
@@ -1339,16 +1357,36 @@ namespace TXTLOG_TO_EXCEL_Project
                         arrayresult = result.Split(' ');
                         Eff_Noise_Column.LoadSMBAlert = arrayresult[1].ToString();
 
-                        arrayList_EffNoise.Add
-                        (
-                              Eff_Noise_Column.SEQ + "|" + Eff_Noise_Column.Name + "|"
-                            + Eff_Noise_Column.Ripple12V + "|" + Eff_Noise_Column.Ripple12Vsb + "|" + Eff_Noise_Column.RipplePWOK + "|" + Eff_Noise_Column.RippleVin_Good + "|" + Eff_Noise_Column.RippleSMBAlert + "|"
-                            + Eff_Noise_Column.Vin + "|" + Eff_Noise_Column.Frequ + "|"
-                            + Eff_Noise_Column.Vout_Max12V + "|" + Eff_Noise_Column.Vout_Max12Vsb + "|" + Eff_Noise_Column.Vout_MaxPWOK + "|" + Eff_Noise_Column.Vout_MaxVin_Good + "|" + Eff_Noise_Column.Vout_MaxSMBAlert + "|"
-                            + Eff_Noise_Column.Vout_Min12V + "|" + Eff_Noise_Column.Vout_Min12Vsb + "|" + Eff_Noise_Column.Vout_MinPWOK + "|" + Eff_Noise_Column.Vout_MinVin_Good + "|" + Eff_Noise_Column.Vout_MinSMBAlert + "|"               
-                            + Eff_Noise_Column.Load12V + "|" + Eff_Noise_Column.Load12Vsb + "|" + Eff_Noise_Column.LoadPWOK + "|" + Eff_Noise_Column.LoadVin_Good + "|" + Eff_Noise_Column.LoadSMBAlert
-                            
-                        );
+                        //取得模組裡各個變數與值
+                        Type Eff_NoiseColumnType = typeof(Eff_Noise_Column);
+                        PropertyInfo[] properties = Eff_NoiseColumnType.GetProperties(BindingFlags.Public | BindingFlags.Static);
+                        foreach (PropertyInfo property in properties)
+                        {
+                            string propertyName = property.Name;
+                            sAll_Col += propertyName + "|";
+                            string propertyValue = (string)property.GetValue(null); // 使用null表示靜態屬性值
+                            sAll_Data += propertyValue + "|";
+                        }
+
+                        if (sAll_Col != "")
+                        {
+                            sAll_Col = sAll_Col.Trim('|');
+                        }
+
+                        if (sAll_Data != "")
+                        {
+                            sAll_Data = sAll_Data.Trim('|');
+                        }
+
+                        if (arrayList_EffNoise.Count == 0)
+                        {
+                            arrayList_EffNoise.Add(sAll_Col);
+                            arrayList_EffNoise.Add(sAll_Data);
+                        }
+                        else
+                        {
+                            arrayList_EffNoise.Add(sAll_Data);
+                        }
 
                     }
                     #endregion
@@ -1401,7 +1439,7 @@ namespace TXTLOG_TO_EXCEL_Project
                 iCurrentRow = 0;
                 for (int i = 1; i < arraystr.Length; i++)
                 {
-                    XSSFCellStyle Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
+                    XSSFCellStyle DItem_style = (XSSFCellStyle)workbook.CreateCellStyle();
                     if (!arraystr[i].ToString().Contains("STEP"))
                     {
                         continue;
@@ -1425,7 +1463,7 @@ namespace TXTLOG_TO_EXCEL_Project
                             sItem = sItem.Substring(0, iFAILIndex + 4);
                         }
                         
-                        Item_style.SetFont(hyperlink_font);
+                        DItem_style.SetFont(hyperlink_font);
 
                         XSSFHyperlink link = new XSSFHyperlink(HyperlinkType.Document);
                         link.Address = "#ALL" + "!A" + AL_CellIndex[0].ToString();  //設置超連結跳轉的位址
@@ -1435,7 +1473,7 @@ namespace TXTLOG_TO_EXCEL_Project
                         sheet_Item.AddMergedRegion(new CellRangeAddress(iCurrentRow, iCurrentRow, 0, 7));  //MergedRegion=合併區
 
                         Item_cell.SetCellValue(sItem);  //STEP.1(UUT Test seq.1) : Clear PROG Mode ---- (0'031) --------------------- PASS
-                        Item_cell.CellStyle = Item_style;
+                        Item_cell.CellStyle = DItem_style;
 
                         //新增項目描述內容
                         XSSFCellStyle Des_style = (XSSFCellStyle)workbook.CreateCellStyle();
@@ -1455,6 +1493,28 @@ namespace TXTLOG_TO_EXCEL_Project
                 return false;
             }
 
+            //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 黑字體
+            XSSFCellStyle Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
+            Item_style.VerticalAlignment = VerticalAlignment.Center;
+            Item_style.Alignment = HorizontalAlignment.Center;
+            Item_style.BorderTop = BorderStyle.Medium;
+            Item_style.BorderBottom = BorderStyle.Medium;
+            Item_style.BorderLeft = BorderStyle.Medium;
+            Item_style.BorderRight = BorderStyle.Medium;
+            Item_style.WrapText = true;
+            Item_style.SetFont(normal_font);
+
+            //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 藍字體
+            XSSFCellStyle Data_style = (XSSFCellStyle)workbook.CreateCellStyle();
+            Data_style.VerticalAlignment = VerticalAlignment.Center;
+            Data_style.Alignment = HorizontalAlignment.Center;
+            Data_style.BorderTop = BorderStyle.Medium;
+            Data_style.BorderBottom = BorderStyle.Medium;
+            Data_style.BorderLeft = BorderStyle.Medium;
+            Data_style.BorderRight = BorderStyle.Medium;
+            Data_style.WrapText = true;
+            Data_style.SetFont(normal_Blue_font);
+
             #region Sheet(Turn on)內容
             try
             {
@@ -1462,28 +1522,6 @@ namespace TXTLOG_TO_EXCEL_Project
                 iCurrentRow = 0;
                 for (int i = 0; i < arrayList_TurnON.Count; i++)
                 {
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 黑字體
-                    XSSFCellStyle TurnON_Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    TurnON_Item_style.VerticalAlignment = VerticalAlignment.Center;
-                    TurnON_Item_style.Alignment = HorizontalAlignment.Center;
-                    TurnON_Item_style.BorderTop = BorderStyle.Medium;
-                    TurnON_Item_style.BorderBottom = BorderStyle.Medium;
-                    TurnON_Item_style.BorderLeft = BorderStyle.Medium;
-                    TurnON_Item_style.BorderRight = BorderStyle.Medium;
-                    TurnON_Item_style.WrapText = true;
-                    TurnON_Item_style.SetFont(normal_font);
-
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 藍字體
-                    XSSFCellStyle TurnON_Data_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    TurnON_Data_style.VerticalAlignment = VerticalAlignment.Center;
-                    TurnON_Data_style.Alignment = HorizontalAlignment.Center;
-                    TurnON_Data_style.BorderTop = BorderStyle.Medium;
-                    TurnON_Data_style.BorderBottom = BorderStyle.Medium;
-                    TurnON_Data_style.BorderLeft = BorderStyle.Medium;
-                    TurnON_Data_style.BorderRight = BorderStyle.Medium;
-                    TurnON_Data_style.WrapText = true;
-                    TurnON_Data_style.SetFont(normal_Blue_font);
-
                     string sTurnON_Data = arrayList_TurnON[i].ToString();
                     string[] arrayTurnON_Data = sTurnON_Data.Split('|');
                     IRow TurnON_row1 = sheet_TurnON.CreateRow(iCurrentRow);
@@ -1503,11 +1541,11 @@ namespace TXTLOG_TO_EXCEL_Project
                         sheet_TurnON.SetColumnWidth(j, 14 * 256);  //設定每個儲存格欄寬 
                         if (j < 2 || i == 0)
                         {
-                            TurnON_cell.CellStyle = TurnON_Item_style;
+                            TurnON_cell.CellStyle = Item_style;
                         }
                         else
                         {
-                            TurnON_cell.CellStyle = TurnON_Data_style;
+                            TurnON_cell.CellStyle = Data_style;
                         }
 
                         //判斷字串是否為Double數值
@@ -1550,29 +1588,7 @@ namespace TXTLOG_TO_EXCEL_Project
                 ISheet sheet_HoldUp = workbook.CreateSheet("hold up");
                 iCurrentRow = 0;
                 for (int k = 0; k < arrayList_HoldUp.Count; k++)
-                {
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 黑字體
-                    XSSFCellStyle HoldUp_Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    HoldUp_Item_style.VerticalAlignment = VerticalAlignment.Center;
-                    HoldUp_Item_style.Alignment = HorizontalAlignment.Center;
-                    HoldUp_Item_style.BorderTop = BorderStyle.Medium;
-                    HoldUp_Item_style.BorderBottom = BorderStyle.Medium;
-                    HoldUp_Item_style.BorderLeft = BorderStyle.Medium;
-                    HoldUp_Item_style.BorderRight = BorderStyle.Medium;
-                    HoldUp_Item_style.WrapText = true;
-                    HoldUp_Item_style.SetFont(normal_font);
-
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 藍字體
-                    XSSFCellStyle HoldUp_Data_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    HoldUp_Data_style.VerticalAlignment = VerticalAlignment.Center;
-                    HoldUp_Data_style.Alignment = HorizontalAlignment.Center;
-                    HoldUp_Data_style.BorderTop = BorderStyle.Medium;
-                    HoldUp_Data_style.BorderBottom = BorderStyle.Medium;
-                    HoldUp_Data_style.BorderLeft = BorderStyle.Medium;
-                    HoldUp_Data_style.BorderRight = BorderStyle.Medium;
-                    HoldUp_Data_style.WrapText = true;
-                    HoldUp_Data_style.SetFont(normal_Blue_font);
-
+                {                    
                     string sHoldUp_Data = arrayList_HoldUp[k].ToString();
                     string[] arrayHoldUp_Data = sHoldUp_Data.Split('|');
                     IRow HoldUp_row1 = sheet_HoldUp.CreateRow(iCurrentRow);
@@ -1592,11 +1608,11 @@ namespace TXTLOG_TO_EXCEL_Project
                         sheet_HoldUp.SetColumnWidth(l, 14 * 256);  //設定每個儲存格欄寬 
                         if (l < 2 || k == 0)
                         {
-                            HoldUp_cell.CellStyle = HoldUp_Item_style;
+                            HoldUp_cell.CellStyle = Item_style;
                         }
                         else
                         {
-                            HoldUp_cell.CellStyle = HoldUp_Data_style;
+                            HoldUp_cell.CellStyle = Data_style;
                         }
 
                         //判斷字串是否為Double數值
@@ -1640,28 +1656,6 @@ namespace TXTLOG_TO_EXCEL_Project
                 iCurrentRow = 0;
                 for (int m = 0; m < arrayList_PSOFF.Count; m++)
                 {
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 黑字體
-                    XSSFCellStyle PSOFF_Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    PSOFF_Item_style.VerticalAlignment = VerticalAlignment.Center;
-                    PSOFF_Item_style.Alignment = HorizontalAlignment.Center;
-                    PSOFF_Item_style.BorderTop = BorderStyle.Medium;
-                    PSOFF_Item_style.BorderBottom = BorderStyle.Medium;
-                    PSOFF_Item_style.BorderLeft = BorderStyle.Medium;
-                    PSOFF_Item_style.BorderRight = BorderStyle.Medium;
-                    PSOFF_Item_style.WrapText = true;
-                    PSOFF_Item_style.SetFont(normal_font);
-
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 藍字體
-                    XSSFCellStyle PSOFF_Data_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    PSOFF_Data_style.VerticalAlignment = VerticalAlignment.Center;
-                    PSOFF_Data_style.Alignment = HorizontalAlignment.Center;
-                    PSOFF_Data_style.BorderTop = BorderStyle.Medium;
-                    PSOFF_Data_style.BorderBottom = BorderStyle.Medium;
-                    PSOFF_Data_style.BorderLeft = BorderStyle.Medium;
-                    PSOFF_Data_style.BorderRight = BorderStyle.Medium;
-                    PSOFF_Data_style.WrapText = true;
-                    PSOFF_Data_style.SetFont(normal_Blue_font);
-
                     string sPSOFF_Data = arrayList_PSOFF[m].ToString();
                     string[] arrayPSOFF_Data = sPSOFF_Data.Split('|');
                     IRow PSOFF_row1 = sheet_PSOFF.CreateRow(iCurrentRow);
@@ -1681,11 +1675,11 @@ namespace TXTLOG_TO_EXCEL_Project
                         sheet_PSOFF.SetColumnWidth(n, 14 * 256);  //設定每個儲存格欄寬 
                         if (n < 2 || m == 0)
                         {
-                            PSOFF_cell.CellStyle = PSOFF_Item_style;
+                            PSOFF_cell.CellStyle = Item_style;
                         }
                         else
                         {
-                            PSOFF_cell.CellStyle = PSOFF_Data_style;
+                            PSOFF_cell.CellStyle = Data_style;
                         }
 
                         //判斷字串是否為Double數值
@@ -1728,29 +1722,7 @@ namespace TXTLOG_TO_EXCEL_Project
                 ISheet sheet_PSON = workbook.CreateSheet("ps on");
                 iCurrentRow = 0;
                 for (int o = 0; o < arrayList_PSON.Count; o++)
-                {
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 黑字體
-                    XSSFCellStyle PSON_Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    PSON_Item_style.VerticalAlignment = VerticalAlignment.Center;
-                    PSON_Item_style.Alignment = HorizontalAlignment.Center;
-                    PSON_Item_style.BorderTop = BorderStyle.Medium;
-                    PSON_Item_style.BorderBottom = BorderStyle.Medium;
-                    PSON_Item_style.BorderLeft = BorderStyle.Medium;
-                    PSON_Item_style.BorderRight = BorderStyle.Medium;
-                    PSON_Item_style.WrapText = true;
-                    PSON_Item_style.SetFont(normal_font);
-
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 藍字體
-                    XSSFCellStyle PSON_Data_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    PSON_Data_style.VerticalAlignment = VerticalAlignment.Center;
-                    PSON_Data_style.Alignment = HorizontalAlignment.Center;
-                    PSON_Data_style.BorderTop = BorderStyle.Medium;
-                    PSON_Data_style.BorderBottom = BorderStyle.Medium;
-                    PSON_Data_style.BorderLeft = BorderStyle.Medium;
-                    PSON_Data_style.BorderRight = BorderStyle.Medium;
-                    PSON_Data_style.WrapText = true;
-                    PSON_Data_style.SetFont(normal_Blue_font);
-
+                {                  
                     string sPSON_Data = arrayList_PSON[o].ToString();
                     string[] arrayPSON_Data = sPSON_Data.Split('|');
                     IRow PSON_row1 = sheet_PSON.CreateRow(iCurrentRow);
@@ -1770,11 +1742,11 @@ namespace TXTLOG_TO_EXCEL_Project
                         sheet_PSON.SetColumnWidth(p, 14 * 256);  //設定每個儲存格欄寬 
                         if (p < 2 || o == 0)
                         {
-                            PSON_cell.CellStyle = PSON_Item_style;
+                            PSON_cell.CellStyle =Item_style;
                         }
                         else
                         {
-                            PSON_cell.CellStyle = PSON_Data_style;
+                            PSON_cell.CellStyle = Data_style;
                         }
 
                         //判斷字串是否為Double數值
@@ -1818,28 +1790,6 @@ namespace TXTLOG_TO_EXCEL_Project
                 iCurrentRow = 0;
                 for (int q = 0; q < arrayList_EffNoise.Count; q++)
                 {
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 黑字體
-                    XSSFCellStyle EffNoise_Item_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    EffNoise_Item_style.VerticalAlignment = VerticalAlignment.Center;
-                    EffNoise_Item_style.Alignment = HorizontalAlignment.Center;
-                    EffNoise_Item_style.BorderTop = BorderStyle.Medium;
-                    EffNoise_Item_style.BorderBottom = BorderStyle.Medium;
-                    EffNoise_Item_style.BorderLeft = BorderStyle.Medium;
-                    EffNoise_Item_style.BorderRight = BorderStyle.Medium;
-                    EffNoise_Item_style.WrapText = true;
-                    EffNoise_Item_style.SetFont(normal_font);
-
-                    //垂直水平置中 儲存格的邊框樣式 文字控制自動換列 藍字體
-                    XSSFCellStyle EffNoise_Data_style = (XSSFCellStyle)workbook.CreateCellStyle();
-                    EffNoise_Data_style.VerticalAlignment = VerticalAlignment.Center;
-                    EffNoise_Data_style.Alignment = HorizontalAlignment.Center;
-                    EffNoise_Data_style.BorderTop = BorderStyle.Medium;
-                    EffNoise_Data_style.BorderBottom = BorderStyle.Medium;
-                    EffNoise_Data_style.BorderLeft = BorderStyle.Medium;
-                    EffNoise_Data_style.BorderRight = BorderStyle.Medium;
-                    EffNoise_Data_style.WrapText = true;
-                    EffNoise_Data_style.SetFont(normal_Blue_font);
-
                     string sEffNoise_Data = arrayList_EffNoise[q].ToString();
                     string[] arrayEffNoise_Data = sEffNoise_Data.Split('|');
                     IRow EffNoise_row1 = sheet_EffNoise.CreateRow(iCurrentRow);
@@ -1859,11 +1809,11 @@ namespace TXTLOG_TO_EXCEL_Project
                         sheet_EffNoise.SetColumnWidth(r, 14 * 256);  //設定每個儲存格欄寬 
                         if (r < 2 || q == 0)
                         {
-                            EffNoise_cell.CellStyle = EffNoise_Item_style;
+                            EffNoise_cell.CellStyle = Item_style;
                         }
                         else
                         {
-                            EffNoise_cell.CellStyle = EffNoise_Data_style;
+                            EffNoise_cell.CellStyle = Data_style;
                         }
 
                         //判斷字串是否為Double數值
